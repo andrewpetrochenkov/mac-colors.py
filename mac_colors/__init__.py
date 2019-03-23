@@ -24,6 +24,14 @@ brew install tag
 
 
 @public.add
+def add(tags, path):
+    """add tags"""
+    if tags:
+        args = ["-a", ",".join(tags)] + list(set(values.get(path)))
+        _run(args)
+
+
+@public.add
 def replace(tags, path):
     """replace tags"""
     if tags:
@@ -36,6 +44,15 @@ def none(path):
     """remove all color tags"""
     args = ["-r", "*"] + list(set(values.get(path)))
     _run(args)
+
+
+@public.add
+def rm(tags, path):
+    """remove tags"""
+    paths = list(set(values.get(path)))
+    if tags and path:
+        args = ["-r", ",".join(tags)] + paths
+        _run(args)
 
 
 @public.add

@@ -1,9 +1,13 @@
+<!--
+https://pypi.org/project/readme-generator/
+-->
+
 [![](https://img.shields.io/badge/OS-MacOS-blue.svg?longCache=True)]()
-[![](https://img.shields.io/pypi/pyversions/mac-colors.svg?longCache=True)](https://pypi.org/pypi/mac-colors/)
-[![](https://img.shields.io/pypi/v/mac-colors.svg?maxAge=3600)](https://pypi.org/pypi/mac-colors/)
+[![](https://img.shields.io/pypi/pyversions/mac-colors.svg?longCache=True)](https://pypi.org/project/mac-colors/)
+[![](https://img.shields.io/pypi/v/mac-colors.svg?maxAge=3600)](https://pypi.org/project/mac-colors/)
 [![Travis](https://api.travis-ci.org/looking-for-a-job/mac-colors.py.svg?branch=master)](https://travis-ci.org/looking-for-a-job/mac-colors.py/)
 
-#### Install
+#### Installation
 ```bash
 $ [sudo] pip install mac-colors
 ```
@@ -14,32 +18,25 @@ $ brew install tag
 ```
 
 #### Functions
-function|description
+function|`__doc__`
 -|-
-`mac_colors.blue(path)`|set blue tag
-`mac_colors.get(path)`|return dictionary with path as key and tags as values
-`mac_colors.gray(path)`|set gray tag
-`mac_colors.green(path)`|set green tag
-`mac_colors.grey(path)`|set grey tag
-`mac_colors.none(path)`|remove all color tags
-`mac_colors.orange(path)`|set orange tag
-`mac_colors.purple(path)`|set purple tag
-`mac_colors.red(path)`|set red tag
-`mac_colors.replace(tags, path)`|replace tags
-`mac_colors.yellow(path)`|set yellow tag
+`mac_colors.add(tags, path)` |add tags
+`mac_colors.get(path)` |return dictionary with path as key and tags as values
+`mac_colors.replace(tags, path)` |replace tags
+`mac_colors.rm(tags, path)` |remove tags
 
 #### CLI
-usage|description
+usage|`__doc__`
 -|-
-`python -m mac_colors.blue path ...`|set blue tag
-`python -m mac_colors.gray path ...`|set gray tag
-`python -m mac_colors.green path ...`|set green tag
-`python -m mac_colors.grey path ...`|set gray tag
-`python -m mac_colors.none path ...`|remove all color tags
-`python -m mac_colors.orange path ...`|set orange tag
-`python -m mac_colors.purple path ...`|set purple tag
-`python -m mac_colors.red path ...`|set red tag
-`python -m mac_colors.yellow path ...`|set yellow tag
+`python -m mac_colors.blue path ...` |set blue tag
+`python -m mac_colors.gray path ...` |set gray tag
+`python -m mac_colors.green path ...` |set green tag
+`python -m mac_colors.grey path ...` |set gray tag
+`python -m mac_colors.none path ...` |remove all color tags
+`python -m mac_colors.orange path ...` |set orange tag
+`python -m mac_colors.purple path ...` |set purple tag
+`python -m mac_colors.red path ...` |set red tag
+`python -m mac_colors.yellow path ...` |set yellow tag
 
 #### Examples
 ```python
@@ -64,4 +61,6 @@ remove colors
 #### Links
 +   [tag](https://github.com/jdberry/tag)
 
-<p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>
+<p align="center">
+    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+</p>
