@@ -1,5 +1,6 @@
 <!--
 https://pypi.org/project/readme-generator/
+https://pypi.org/project/python-readme-generator/
 -->
 
 [![](https://img.shields.io/badge/OS-MacOS-blue.svg?longCache=True)]()
@@ -25,7 +26,7 @@ function|`__doc__`
 `mac_colors.replace(tags, path)` |replace tags
 `mac_colors.rm(tags, path)` |remove tags
 
-#### CLI
+#### Executable modules
 usage|`__doc__`
 -|-
 `python -m mac_colors.blue path ...` |set blue tag
@@ -62,5 +63,5 @@ remove colors
 +   [tag](https://github.com/jdberry/tag)
 
 <p align="center">
-    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
 </p>
