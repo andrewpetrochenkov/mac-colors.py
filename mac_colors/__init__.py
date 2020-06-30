@@ -1,7 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+__all__ = ['add', 'replace', 'rm', 'none',
+           'blue', 'gray', 'grey', 'green', 'orange', 'purple', 'red', 'yellow', 'get']
+
+
 import os
-import public
 import runcmd
 import values
 
@@ -23,7 +24,6 @@ brew install tag
     return runcmd.run(args)._raise().out
 
 
-@public.add
 def add(tags, path):
     """add tags"""
     if tags:
@@ -31,7 +31,6 @@ def add(tags, path):
         _run(args)
 
 
-@public.add
 def replace(tags, path):
     """replace tags"""
     if tags:
@@ -39,14 +38,12 @@ def replace(tags, path):
         _run(args)
 
 
-@public.add
 def none(path):
     """remove all color tags"""
     args = ["-r", "*"] + list(set(values.get(path)))
     _run(args)
 
 
-@public.add
 def rm(tags, path):
     """remove tags"""
     paths = list(set(values.get(path)))
@@ -55,55 +52,46 @@ def rm(tags, path):
         _run(args)
 
 
-@public.add
 def blue(path):
     """set blue tag"""
     replace(["blue"], path)
 
 
-@public.add
 def gray(path):
     """set gray tag"""
     replace(["gray"], path)
 
 
-@public.add
 def grey(path):
     """set grey tag"""
     replace(["gray"], path)
 
 
-@public.add
 def green(path):
     """set green tag"""
     replace(["green"], path)
 
 
-@public.add
 def orange(path):
     """set orange tag"""
     replace(["orange"], path)
 
 
-@public.add
 def purple(path):
     """set purple tag"""
     replace(["purple"], path)
 
 
-@public.add
 def red(path):
     """set red tag"""
     replace(["red"], path)
 
 
-@public.add
 def yellow(path):
     """set yellow tag"""
     replace(["yellow"], path)
 
 
-@public.add
 def get(path):
     """return dictionary with path as key and tags as values"""
     args = ["-l"] + list(set(values.get(path)))
